@@ -1,0 +1,635 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* home page */
+.header{ 
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba( 4,9,20,0.7),rgba( 4,9,20,0.8) ), url(images/ictpro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{ 
+    display: flex;
+    padding:3px 10px;
+    justify-content: space-between;
+    align-items:center;
+    cursor: pointer;
+    
+  
+}
+
+.nav-links{ 
+    flex: 1;
+    text-align: right;   
+}
+.nav-links ul li{ 
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+.nav-links ul li a { 
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links ul li::after{ 
+    content:'';
+    width:0%;
+    height: 2px;
+    background-color: crimson;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{ 
+    width:100%;
+}
+
+.textbox{ 
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+    
+   
+.textbox h1{ 
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: monospace;
+   }
+
+.textbox p{ 
+    font-size: 16px;
+    line-height: 25px;
+    word-spacing: 3px;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+}
+
+.herobtn{ 
+display: inline-block;
+position: relative;
+text-decoration: none;
+border:1px solid #e5e5e5;
+background-color: transparent;
+margin-top: 40px;
+padding: 10px;
+color: white;
+transform: 1s;
+}
+
+.herobtn:hover{ 
+      background-color: crimson;
+      border: 1px solid transparent;
+
+}
+nav .fa{ 
+    display: none;
+}
+
+@media ( max-width:500px)  { 
+
+    .textbox h1{ 
+        font-size:30px;
+        margin-bottom: 20px;
+        font-family: monospace;
+       }
+
+       .textbox p{ 
+        font-size: 14px;
+        line-height: 25px;
+        word-spacing: 1px;
+        margin-bottom: 20px;
+        color: #e5e5e5;
+    }
+    .nav-links { 
+        position:absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right:-200px;
+        text-align:center;
+        background-color: tomato;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .nav-links ul li{ 
+        display: block;
+    }
+
+    .nav-links ul li:hover::after{ 
+        content:'';
+        width:50%;
+        height: 2px;
+        background-color: crimson;
+        margin: auto;
+        display: block;
+        transition: 0.5s;
+}
+
+nav .fa{ 
+    display: block;
+    color: white;
+    margin: 5px;
+    font-size:20px;
+    cursor: pointer;
+    text-align: right;
+}
+.nav-links ul { 
+    padding: 30px;
+  
+}
+}
+
+
+/* coures we offer  */
+
+.course{ 
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.course h1{
+    margin-top: 20px;
+    font-size: 36px;
+    font-family:monospace ;
+} 
+
+.course p{ 
+    margin-top:10px;
+    font-size: 14px;
+    word-spacing:2px;
+    padding-bottom:40px;
+    
+}
+
+.row{ 
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.coruse-col{
+    flex-basis: 45%;
+    padding: 10px 18px;
+    background-color: #e5e5e5;
+    border-radius:10px;
+    transform: 0.5px;
+    margin: 5px 12px 10px;
+
+}
+
+.coruse-col h3{ 
+    margin: 10px 5px 20px ;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    font-weight: border;
+   
+}
+
+.coruse-col p{ 
+    margin: 5px;
+    font-size: 16px;
+    word-spacing:3px;
+    padding-bottom:15px;
+}
+
+.coruse-col:hover{
+  box-shadow:0px 0px 20px 0px   rgba(0, 0, 0, 0.3) ;
+}
+@media (max-width:700px){ 
+    .row{ 
+       flex-direction: column;
+    }
+}
+
+/* campus */
+
+.campus{ 
+    width: 80%;
+    text-align: center;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.campus h1{
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family:monospace ;
+} 
+.campus p{ 
+    margin: 5px;
+    font-size: 14px;
+    word-spacing:3px;
+    padding-bottom:15px;
+}
+
+
+
+.campus-col{ 
+    flex-basis:32%;
+    position: relative;
+    border-radius:10px;
+    overflow: hidden;
+    margin:30px 0px 50px; 
+ 
+ 
+}
+.campus-col img{ 
+    width:100%;
+    height: 400px;
+   display : block;
+
+}
+.layer{ 
+    background:transparent;
+    position: absolute;
+    top: 0;
+    left: 20;
+    height: 100%;
+    width: 100%;
+    opacity:0;
+    transition:0.5s;
+}
+.layer:hover{ 
+    opacity: 1;
+    background:  rgba(226,0,34,0.7);
+    border-radius: 10px;
+
+}
+
+.layer h3{ 
+    color: white;
+    width: 100%;
+    font-size: 23px;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: absolute;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.layer:hover h3{ 
+    bottom: 45%;
+    opacity: 1;
+}
+
+/* Facilities */
+
+.facilities{ 
+    width: 80%;
+    padding-top: 70px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.facilities h1{ 
+     font-family: monospace;
+     font-size: 35px;
+     padding-bottom: 30px;
+}
+
+.facilities p{ 
+    margin: 5px;
+    font-size: 14px;
+    word-spacing:3px;
+    padding-bottom:15px;
+}
+
+.facilities-col { 
+    flex-basis: 32%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+   
+}
+.facilities-col img{ 
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    
+}
+
+.facilities-col h3{ 
+    padding-top: 25px;
+    font-family: monospace;
+    font-size: 27px;
+    text-align: left;
+
+}
+
+.facilities-col p{ 
+    font-size: 16px;
+    word-spacing:3px;
+    padding-bottom:5px;
+    color:navy;
+    text-align: left;
+}
+
+/* Testimonials */
+
+.testimonial{ 
+    width: 80%;
+    margin:auto;
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.testimonial h1{ 
+    font-family: monospace;
+     font-size: 35px;
+     padding-bottom: 34px;
+}
+
+.testimonial p{ 
+    margin: 5px;
+    font-size: 14px;
+    word-spacing:3px;
+    padding-bottom:15px;
+}
+
+.test-col{ 
+    flex-basis: 45%;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    text-align: left;
+    padding: 25px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    display: flex;
+  
+  
+}
+
+.test-col img{ 
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left:5px ;
+    margin-right:25px;
+}
+.test-col p{ 
+    margin: 5px;
+    font-size: 16px;
+    word-spacing:3px;
+    text-align: left;
+    padding:0 ;
+}
+.test-col h3 { 
+    text-align: left;
+    margin-top: 13px;
+    font-family: monospace;
+    font-size: large;
+}
+
+.test-col i{ 
+    color: red;
+    margin-top:10px;
+}
+
+/* call to action  */
+
+.cta{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    height:30% ;
+    background-image: linear-gradient( rgba( 0,0,0,0.7), rgba(0,0,0,0.7)), url(images/staff.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 100px 0px;
+ }
+
+ .cta h1{ 
+     color: white;
+     font-family: monospace;
+     font-size: 45px;
+ }
+
+ .cta a{ 
+     padding: 15px 20px;
+     border-radius: 7px;
+      }
+
+@media( max-width:700px){ 
+    .cta h1{ 
+        font-size: 20px;
+    }  
+}
+
+ /* footer */
+ .footer{ 
+     width: 100%;
+     height: 30vh;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 100px;
+  
+ }
+
+.footer h3{ 
+     font-family: monospace;
+     font-size: 35px;
+     padding-bottom:  20px;
+ }
+
+ .footer p{ 
+     font-size: 16px;
+     margin: 20px;
+     font-size: 16px;
+     word-spacing:3px;
+ }
+     
+.icons i{ 
+    padding:10px; 
+    color: red;
+}
+
+.icons p{ 
+    padding-bottom:20px;
+}
+#love{ 
+     padding:0px;
+}
+
+/* about us page */
+
+.sub-header{ 
+    height: 50vh;
+    background-image: linear-gradient(rgba( 0,0,0,0.7),rgba( 0,0,0,0.7)), url(images/aboutUs.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.sub-header h1{ 
+    color: white;
+    font-family: monospace;
+    font-size: 54px;
+    padding-top:100px;
+}
+
+/* about us content */
+
+.aboutus-cont{ 
+    width: 80%;
+    padding-top: 120px;
+    margin: auto;
+    text-align: left;
+
+}
+
+.aboutus-cont h1{ 
+    font-family: monospace;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.about-col{ 
+    flex-basis:55%;
+    margin: 10px;
+    padding: 20px 35px;
+}
+.about-col img{ 
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 30px;
+
+}
+
+.about-col p{
+     text-align: left;
+     line-height: 25px;
+     padding:25px 0 15px;
+}
+.redbtn{ 
+    color: red ;
+    border:1px solid red;
+    background-color: transparent;
+      
+}
+
+.redbtn:hover{ 
+    color: white;
+}
+
+ /*  Blog */
+.blog h1{ 
+    font-size: 40px;
+    padding-top: 120px;
+
+}
+
+.blog-cont{ 
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align:left;
+}
+
+.blog-left{ 
+    flex-basis: 65%;
+    margin:10px;
+    padding:12px
+}
+
+.blog-left img{ 
+    width: 100%;
+}
+
+.blog-left h3{ 
+    padding: 20px 0;
+    text-align: left;
+    font-size: 25px;
+    font-family: monospace;
+}
+
+.blog-left p{ 
+    color: navy;
+}
+
+.blog-right{ 
+    flex-basis: 35%;
+    margin: 20px;
+}
+
+.blog-right h3{ 
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family:monospace ;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.blog-right h3:hover{ 
+    background-color: navy;
+}
+
+.blog-right div{ 
+    padding:5px ;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+
+.blog-right div:nth-child(even){ 
+    background-color: #e5e5e5;
+}
+
+.comment-section{ 
+    padding:20px;
+    border: 1px solid  #e5e5e5;
+    outline: none;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.aboutu input,
+.aboutu textarea{ 
+    margin:10px 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: #e5e5e5;
+    border:1px solid transparent;
+    border-radius:7px ;
+}
+
+@media( max-width:700px) {
+    .blog h1{ 
+        font-size: 26px;
+    }
+    
+}
